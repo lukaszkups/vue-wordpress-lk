@@ -1,12 +1,17 @@
 <template>
   <div id="app">
-    </ul>
+    <app-header></app-header>
   </div>
 </template>
 
 <script>
-export default {
-}
+  import Header from './components/header.vue';
+
+  export default {
+    components: {
+      appHeader: Header
+    }
+  }
 </script>
 
 <style lang="scss">
