@@ -55,7 +55,7 @@
     color: #fff;
   }
 
-  .logo, .logo:before, .logo:after {
+  footer .logo, footer .logo:before, footer .logo:after {
     background-color: #fff;
   }
 
