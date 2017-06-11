@@ -1,7 +1,7 @@
 <template>
   <div>
     <li class="home-section" v-for="element in elements" :style="{backgroundImage: 'url(' + element.background + ')'}" key="element.id"> 
-      <div class="content-wrapper" :style="{color: element.fontColor}"> 
+      <div class="content-wrapper" :style="{color: element.fontColor, background: element.backgroundColor}"> 
         <h2>{{ element.heading }}</h2> 
         <div class="content" v-html="element.body"></div>
       </div>
@@ -23,19 +23,25 @@
     background-size: cover;
     width: 100%;
     display: block;
+    filter: grayscale(100%);
   }
 
   .content-wrapper {
     display: block;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow:hidden;
     width: 30%;
-    min-width: 370px;
-    height: 50vh;
+    min-width: 400px;
+    height: auto;
     float: right;
     margin-right: 10%;
-    margin-top: 30vh;
+    margin-top: 25vh;
+    border: 2px solid #fff;
   }
 
   h2 {
+    margin-top:0;
     font-family: 'Oswald', sans-serif;
     font-weight: 700;
     color: inherit;
